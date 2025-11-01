@@ -1,0 +1,133 @@
+
+
+header {
+    display:grid;
+    grid-template-columns:24px auto 44px;
+    padding: 5px, 0, 5px, 10px;
+    align-items:end;
+    border:solid 1px lightgrey;
+    column-gap:8px;
+
+}
+
+h1{
+    background-color: #FF6B01;
+    color: white;
+    font-size: larger;
+}
+header{
+    background-color:#353535;
+}
+
+header img {
+    display:block;
+    width:100%;
+    height:auto;
+    padding-bottom: 5px ;
+}
+
+header span{
+    font-size: 1.2rem;
+    color:rgb(255, 255, 255);
+    text-align: center;
+
+
+}
+.hamburger {
+    background:none;
+    border:none;
+    color:rgb(255, 255, 255);
+    font-size: 2rem;
+    cursor:pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hamburger::before {
+    content: "\2630";
+
+}
+.hamburger.show::before{
+    content:"\00D7"
+
+}
+.navigation{
+    display:none;
+}
+.navigation.show{
+    display:flex;
+
+}
+.navigation li{
+    list-style-type: none;
+    padding:2px;
+
+}
+.navigation li:hover {
+    border:solid rgb(255, 255, 255);
+    background-color: #FF6B01;
+    opacity: 0.5;
+
+}
+
+.navigation a {
+    text-decoration: none;
+    color:white;
+}
+ .courses ul {
+     display: flex;
+     justify-content: space-around;
+ }
+
+ .courses a {
+     text-decoration: none;
+     border: solid #000000;
+ }
+
+ .class a {
+     display: flex;
+     justify-content: space-around;
+ }
+
+ .class a {
+     text-decoration: none;
+     border: solid black;
+     margin:0px
+ }
+
+ .class ul {
+     list-style-type: none;
+ }
+
+ .courses ul {
+     list-style-type: none;
+ }
+  footer {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+      justify-items: stretch;
+  }
+
+  .links {
+      display: flex;
+      justify-content: space-around;
+      padding:0px;
+      margin:0px;
+  }
+   div.content {
+       justify-items: center;
+   }
+   #home h1 {
+       background-color: white;
+       color: #353535;
+       text-align: center;
+       padding:0px
+   }
+   main {
+    text-align: center;
+   }
+   p {
+       padding: 5px;
+       margin: 0px;
+       border: 0px
+   }
+

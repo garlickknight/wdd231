@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Style Sheets-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href = "styles/larger.css">
+
+    <!-- JS Sheet -->
+    <script src="scripts/navigation.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src = "images/home.svg" width = "512" height = "512">
+        <span>Joe Garlick's Site</span>
+        <button id="ham-btn" class="hamburger"></button>
+        <nav id ="nav-bar" class = "navigation">
+            <ul>
+                <li class = "home"><a href="">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="final.html">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <div id = "home"><h1>Home</h1></div>
+            <section class = "about">
+                <h1>About me</h1>
+                <p>Elias never planned on becoming the unofficial “fixer” of his neighborhood, but somehow he ended up being the one
+                everyone called when a bike chain snapped, a fence leaned too far, or a stubborn jar lid refused to budge. He carried a
+                pocketful of mismatched screws and a notebook filled with half-sketched inventions, always tinkering with ideas that
+                might make life a little smoother. Though he rarely sought the spotlight, people noticed the way his eyes lit up when he
+                solved a problem—like he’d just uncovered a secret puzzle piece the world had been missing. To him, every small repair
+                was less about the object itself and more about keeping the rhythm of daily life humming along.</p>
+            </section>
+            <section class="photo">
+                <h1>Student Photo</h1>
+                <img src = "images/IMG_9883.jpg" width = "250px" height = "auto">
+            </section>
+        <section class = "bottom">
+            <div class = "courses">
+                <h1>Web Certificate Courses</h1>
+                <ul>
+                    <li><button id = "all">All</button></li>
+                    <li><button id = "css">CSS</button></li>
+                    <li><button id = "wdd">WDD</button></li>
+                </ul>
+            </div>
+            <div class = "class">
+                <ul id = "list">
+
+                </ul>
+            </div>
+            <p id = "credits"></p>
+        </section>
+    </main>
+    <footer>
+        <div class = "links">
+            <a href = "https://www.facebook.com/joseph.garlick.31" target="_blank"><img src = "images/104498_facebook_icon.png"></a>
+            <a href = "https://www.instagram.com/joe_garlick12/" target="_blank"><img src="images/1161953_instagram_icon.svg"></a>
+            <a href = "https://www.linkedin.com/feed/" target="_blank"><img src = "images/2986200_linkdin_logo_media_social_icon.png"></a>
+            <a href = "https://www.microsoft.com/en-us/microsoft-teams/download-app?ocid=ORSEARCH_Bing&msockid=38c6296717f56aca04823ce216cf6bee" target="_blank"><img src = "images/microsoft-teams.svg"></a>
+        </div>
+        <div class = "content">
+            <p>&copy;<span id="currentyear"></span> Joseph Garlick Utah / Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
