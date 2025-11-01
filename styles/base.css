@@ -72,6 +72,7 @@ header span{
     text-decoration: none;
     color:white;
 }
+
  .courses ul {
      display: flex;
      justify-content: space-around;
@@ -80,17 +81,16 @@ header span{
  .courses a {
      text-decoration: none;
      border: solid #000000;
+     
  }
 
- .class a {
+ .class li {
      display: flex;
      justify-content: space-around;
  }
 
- .class a {
+ .class li {
      text-decoration: none;
-     border: solid black;
-     margin:0px
  }
 
  .class ul {
