@@ -6,10 +6,50 @@
     <meta property = "og:title" content = "Salt Lake City Chamber of Comerse">
     <meta property = "og:description" content = "A resource hub for local businesses and community members. The site will share event info, networking opportunities, business directories, and encourage local shopping to support economic growth and community connection.">
     <meta property= "og:image" content = "https://as2.ftcdn.net/v2/jpg/05/19/22/93/1000_F_519229382_O38THYmxD3mqTA9con7xDacxid83O2Yp.jpg">
-    <meta property = "og:url" content = "">
+    <meta property = "og:url" content = "https://garlickknight.github.io/wdd131/chamber/directory.html">
+    <!-- Links to css and JavaScript  -->
+    <link rel="stylesheet" href="styles/normalize.css">
+     <link rel="stylesheet" href = "styles/larger.css">
+     <link rel="stylesheet" href = "styles/base.css">
+     <script src = "scripts/directory.js" defer></script>
     <title>Document</title>
 </head>
-<body>
+<main>
+    <header>
+        <img src="images/bank.svg" width="24px" height="auto">
+        <h1>SLC Chamber of Commerse</h1>
+        <button id = "ham-btn" class = hamburger></button>
+        <nav id = "nav-bar" class = "navigation">
+            <ul class = "nav">
+                <li><a>Home</a></li>
+                <li><a>Directory</a></li>
+                <li><a>Join</a></li>
+                <li><a>Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <div id = "cards">
+
+        </div>
+    </body>
+    <footer>
+        <div id = "footerTitle">
+            <h3>Salt Lake City Chamber of Commerse</h3>
+        </div>
+        <div class="links">
+            <a href="https://www.youtube.com/feed/storefront" target="_blank"><img src="images/5305164_play_video_youtube_youtube logo_icon.png"></a>
+            <a href="https://www.linkedin.com/feed/" target="_blank"><img src="images/2986200_linkdin_logo_media_social_icon.png"></a>
+            <a href="https://x.com/"target="_blank"><img src="images/104501_twitter_bird_icon.png"></a>
+        </div>
+        <div class="content">
+            <p>&copy;<span id="currentyear"><script>var date = new Date();
+            var year = date.getFullYear();
+document.getElementById("currentyear").innerHTML = year;</script></span> Joseph Garlick Utah / Last Modified: <span id="lastModified"><script>
+    var year = date.getFullYear();
+    document.getElementById("lastModified").innerHTML = document.lastModified;</script></span></p></div>
+    </footer>
     
-</body>
+</main>
 </html>
+

@@ -1,0 +1,36 @@
+@media screen and (max-width:38rem){header{
+    display: grid;
+    grid-template-columns: 24px auto auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#ham-btn::before {
+    content: "\2630";
+
+}
+
+#ham-btn.show::before {
+    content: "\00D7"
+
+}
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: flex;
+
+}
+
+.navigation li {
+    list-style-type: none;
+    padding: 2px;
+
+}
+div img {
+    width: 44px;
+    height: 44px;
+}
+
+}
