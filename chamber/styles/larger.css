@@ -1,5 +1,5 @@
 @media only screen and (min-width:38rem){
-    main{
+    body{
         background-color:#F5F0E1;
 
     }
@@ -7,6 +7,8 @@
     display: grid;
     grid-template-columns: 44px auto auto;
     align-items: center;
+    border:solid black;
+    
 }
 
 .nav {
@@ -24,6 +26,7 @@
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    border:solid black;
 }
 #footerTitle {
     text-align: center;
@@ -35,9 +38,27 @@ footer {
 .content {
     text-align:center;
 }
-div img {
+header div img {
     width:44px;
     height:44px;
+}
+footer div img {
+    width: 44px;
+    height: 44px;
+
+}
+
+#cards {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    place-items: center; /* centers content inside each grid cell */
+    max-width: 1200px;
+    margin: 0 auto; /* centers the grid itself on the page */
+}
+section{
+    background-color: lightblue;
+    padding: 15px;
 }
 
 }

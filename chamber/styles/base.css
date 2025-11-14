@@ -1,8 +1,16 @@
-@media screen and (max-width:38rem){header{
+@media screen and (max-width:38rem){
+    body{
+        background-color:#F5F0E1;
+    }
+    header{
     display: grid;
     grid-template-columns: 24px auto auto;
     align-items: center;
     justify-content: space-around;
+    border: solid black;
+}
+footer {
+    border: solid black;
 }
 
 #ham-btn::before {
@@ -28,9 +36,22 @@
     padding: 2px;
 
 }
-div img {
+header div img {
     width: 44px;
     height: 44px;
+}
+footer div img {
+    width: 44px;
+    height: 44px;
+
+}
+#cards {
+    display: flex;
+    flex-direction:column;
+}
+section {
+    background-color: lightblue;
+    padding: 15px;
 }
 
 }

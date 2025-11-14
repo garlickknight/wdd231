@@ -1,21 +1,21 @@
-[
+{ "members":[
     {
         "name":"Saratoga Physical Therapy",
-        "address": "Sergant Court Drive", 
+        "address": "Sergeant Court Drive", 
         "phone": "(801)-000-0000",
         "website": "https://saratogaptandsportsmed.com/",
-        "icon":"wasatchtech.png",
-        "membershipLevel":"14", 
-        "businessType":"Phsyical Therapy", 
+        "icon":"https://picsum.photos/200",
+        "membershipLevel": 1, 
+        "businessType":"Physical Therapy", 
         "contactPerson": "Liz Austin", 
-        "email": "saratogapt@gamil.com"
+        "email": "saratogapt@gmail.com"
     }, 
     {
         "name": "Beehive Bistro",
         "address": "456 Main Street, Salt Lake City, UT 84111",
         "phone": "(801) 555-0245",
         "website": "https://www.beehivebistro.com",
-        "icon": "beehivebistro.jpg",
+        "icon": "https://picsum.photos/200",
         "membershipLevel": 2,
         "businessType": "Restaurant",
         "contactPerson": "Carlos Ramirez",
@@ -26,7 +26,7 @@
         "address": "789 Canyon Road, Salt Lake City, UT 84103",
         "phone": "(801) 555-0333",
         "website": "https://www.greatsaltrealty.com",
-        "icon": "greatsaltrealty.svg",
+        "icon": "https://picsum.photos/200",
         "membershipLevel": 3,
         "businessType": "Real Estate",
         "contactPerson": "Linda Park",
@@ -37,7 +37,7 @@
         "address": "321 Adventure Blvd, Salt Lake City, UT 84104",
         "phone": "(801) 555-0456",
         "website": "https://www.summitgear.com",
-        "icon": "summitgear.png",
+        "icon": "https://picsum.photos/200",
         "membershipLevel": 1,
         "businessType": "Retail",
         "contactPerson": "Jake Thompson",
@@ -48,7 +48,7 @@
         "address": "654 Finance Ave, Salt Lake City, UT 84105",
         "phone": "(801) 555-0678",
         "website": "https://www.deseretfinancial.com",
-        "icon": "deseretfinancial.png",
+        "icon": "https://picsum.photos/200",
         "membershipLevel": 2,
         "businessType": "Finance",
         "contactPerson": "Monica Patel",
@@ -59,7 +59,7 @@
         "address": "987 Design Lane, Salt Lake City, UT 84106",
         "phone": "(801) 555-0789",
         "website": "https://www.hivecreative.com",
-        "icon": "hivecreative.jpg",
+        "icon": "https://picsum.photos/200",
         "membershipLevel": 1,
         "businessType": "Marketing & Design",
         "contactPerson": "Aaron Blake",
@@ -70,10 +70,10 @@
         "address": "159 Health Dr, Salt Lake City, UT 84107",
         "phone": "(801) 555-0890",
         "website": "https://www.altawellness.com",
-        "icon": "altawellness.svg",
+        "icon": "https://picsum.photos/200",
         "membershipLevel": 3,
         "businessType": "Healthcare",
         "contactPerson": "Dr. Sarah Nguyen",
         "email": "sarah.nguyen@altawellness.com"
     }
-]
+]}
