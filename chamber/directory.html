@@ -7,9 +7,9 @@
     <meta property="og:description" content="A resource hub for local businesses and community members. The site will share event info, networking opportunities, business directories, and encourage local shopping to support economic growth and community connection.">
     <meta property="og:image" content="https://as2.ftcdn.net/v2/jpg/05/19/22/93/1000_F_519229382_O38THYmxD3mqTA9con7xDacxid83O2Yp.jpg">
     <title>Directory</title>
-    <!-- <meta property="og:url" content="https://garlickknight.github.io/wdd131/chamber/directory.html">\
+    <meta property="og:url" content="https://garlickknight.github.io/wdd131/chamber/directory.html">\
     <meta name="description" content="A resource hub for local businesses and community members. The site will share event info, networking opportunities, business directories, and encourage local shopping to support economic growth and community connection.">
-    <meta name="author" content="Joseph Garlick"> -->
+    <meta name="author" content="Joseph Garlick">
     <link rel="icon" href="WDD231/images/favicon.ico">
     <!-- Links to css and JavaScript  -->
     <link rel="stylesheet" href="styles/normalize.css">
@@ -22,8 +22,8 @@
         <img src="images/bank.svg" width="24" alt="Bank logo">
         <h1>SLC Chamber of Commerse</h1>
         <button id="ham-btn" class="hamburger" aria-label="Toggle navigation"></button>
-        <nav id = "nav-bar" class = "navigation">
-            <ul class = "nav">
+        <nav id="nav-bar" class="navigation">
+            <ul class="nav"></ul>
                 <li><a>Home</a></li>
                 <li><a>Directory</a></li>
                 <li><a>Join</a></li>
@@ -32,66 +32,19 @@
         </nav>
     </header>
     <main>
-        <div id = "cards"></div>
-        <script>const cardContainer = document.getElementById("cards");
-
-            const display = (cardDisplay) => {
-                cardContainer.innerHTML = ""; // clear previous cards
-
-                cardDisplay.forEach(item => {
-                    const section = document.createElement('section');
-                    const name = document.createElement('h2');
-                    const img = document.createElement('img');
-                    const address = document.createElement('p');
-                    const phone = document.createElement('p');
-                    const linkHolder = document.createElement('p');
-                    const link = document.createElement("a");
-
-                    name.textContent = item.name;
-                    img.setAttribute("src", item.icon);
-                    img.setAttribute("alt", `${item.name} icon`);
-                    address.textContent = item.address;
-                    phone.textContent = item.phone;
-                    link.textContent = item.website;
-                    link.setAttribute("href", item.website);
-
-                    linkHolder.appendChild(link);
-
-                    section.appendChild(name);
-                    section.appendChild(img);
-                    section.appendChild(address);
-                    section.appendChild(phone);
-                    section.appendChild(linkHolder);
-
-                    cardContainer.appendChild(section);
-                });
-            };
-
-            async function getData() {
-                const response = await fetch("data/members.json");
-                const data = await response.json();
-                console.table(data.members); // log members array for debugging
-                display(data.members);
-
-            }
-
-            getData();</script>
+        <div id="cards"></div>
     </main>
     <footer>
-        <div id = "footerTitle">
+        <div id="footerTitle"></div>
             <h3>Salt Lake City Chamber of Commerse</h3>
         </div>
         <div class="links">
-            <a href="https://www.youtube.com/feed/storefront" target="_blank"><img src="images/youtube.png" alt = "YouTube Logo"></a>
-            <a href="https://www.linkedin.com/feed/" target="_blank"><img src="images/linkdin.png" alt = "YouTube Logo"></a>
-            <a href="https://x.com/" target="_blank"><img src="images/twitter.png" alt = "Twitter"></a>
+            <a href="https://www.youtube.com/feed/storefront" target="_blank"><img src="images/youtube.png" alt="YouTube Logo"></a>
+            <a href="https://www.linkedin.com/feed/" target="_blank"><img src="images/linkdin.png" alt="YouTube Logo"></a>
+            <a href="https://x.com/" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
         </div>
         <div class="content">
-            <p>&copy;<span id="currentyear"><script>var date = new Date();
-            var year = date.getFullYear();
-document.getElementById("currentyear").innerHTML = year;</script></span> Joseph Garlick Utah / Last Modified: <span id="lastModified"><script>
-    var year = date.getFullYear();
-    document.getElementById("lastModified").innerHTML = document.lastModified;</script></span></p></div>
+            <p>&copy;<span id="currentyear"></span> Joseph Garlick Utah / Last Modified: <span id="lastModified"></span></p></div>
     </footer>
 </body>
 </html>
