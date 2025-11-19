@@ -1,6 +1,7 @@
 @media screen and (max-width:38rem){
     body{
         background-color:#F5F0E1;
+        font-family: "Roboto", sans-serif;
     }
     header{
     display: grid;
