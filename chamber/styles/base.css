@@ -10,6 +10,11 @@
     justify-content: space-around;
     border: solid black;
 }
+
+a {
+    text-decoration: none;
+}
+
 footer {
     border: solid black;
 }

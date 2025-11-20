@@ -11,17 +11,22 @@
     
 }
 
-
-
 .navigation {
     display: flex;
+    /* I asked AI how to get rid of the bullet points in the list and it helped me out. */
+}
+.nav {
+    display: flex;
     text-decoration: none;
-    justify-content: space-around;
+    justify-content: space-between;
     /* I asked AI how to get rid of the bullet points in the list and it helped me out. */
     list-style: none;
-    margin: 0;
-    padding: 0;
-    
+}
+li{
+    padding: 18px;
+}
+a{
+    text-decoration: none;
 }
 #ham-btn{
     display: none;
