@@ -6,6 +6,7 @@ navbutton.addEventListener('click', () => {
     navBar.classList.toggle("show");
 });
 
+
 const cardContainer = document.getElementById("cards");
 
 const display = (cardDisplay) => {
