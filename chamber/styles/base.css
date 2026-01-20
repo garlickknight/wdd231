@@ -51,10 +51,27 @@ footer div img {
     height: 44px;
 
 }
-#cards {
+#cards.show {
     display: flex;
     flex-direction:column;
 }
+#cards.hide {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    place-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+#cards.show{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+#bar-btn::before{
+    content: "One Column";
+}
+
 section {
     background-color: lightblue;
     padding: 15px;

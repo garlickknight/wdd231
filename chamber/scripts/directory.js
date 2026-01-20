@@ -1,10 +1,19 @@
 const navbutton = document.querySelector("#ham-btn");
 const navBar = document.querySelector("#nav-bar");
+const barbutton = document.querySelector("#bar-btn");
+const cards = document.querySelector("#cards");
+const one = document.querySelector("#one-card");
 
 navbutton.addEventListener('click', () => {
     navbutton.classList.toggle('show');
     navBar.classList.toggle("show");
 });
+
+barbutton.addEventListener('click', () => {
+    barbutton.classList.toggle("show");
+    cards.classList.toggle("hide")
+});
+
 
 
 const cardContainer = document.getElementById("cards");
@@ -48,6 +57,8 @@ async function getData() {
     display(data.members);
 
 }
+
+
 
 getData();
 

@@ -62,6 +62,32 @@ footer div img {
     max-width: 1200px;
     margin: 0 auto; /* centers the grid itself on the page */
 }
+#cards.show {
+    display: flex;
+    flex-direction: column;
+}
+
+#cards.hide {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    place-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#cards.show {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
+#bar-btn::before {
+    content: "One Column Desplay";
+}
+#bar-btn.show::before{
+    content:"Grid Desplay";
+}
 section{
     background-color: lightblue;
     padding: 15px;
