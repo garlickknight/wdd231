@@ -76,12 +76,6 @@ footer div img {
     margin: 0 auto;
 }
 
-#cards.show {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-}
-
 #bar-btn::before {
     content: "One Column Desplay";
 }
