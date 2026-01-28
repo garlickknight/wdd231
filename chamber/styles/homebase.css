@@ -83,6 +83,12 @@
     section {
         background-color: lightblue;
         padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+        justify-content: flex-start;
+        width: 100%;
     }
     main img {
         display: block;
