@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Salt Lake City Chamber of Comerse">
     <meta property="og:description"
-        content="A resource hub for local businesses and community members. The site will share event info, networking opportunities, business directories, and encourage local shopping to support economic growth and community connection.">
-    <meta property="og:image" content="images/web-photo-editor-1200x630.jpg">
+        content="The site shares info, networking opportunities, business directories, and encourage shopping to support growth and community connection.">
+    <meta property="og:image" content="https://garlickknight.github.io/wdd231/chamber/images/slctemp.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://garlickknight.github.io/wdd131/chamber/directory.html">
 
 
-    <title>Salt Lake Chamber of Comerse Directory</title>
-    <meta name="description" content="A resource hub for local businesses and community members. The site will share event info, networking opportunities, business directories, and encourage local shopping to support economic growth and community connection.">
+    <title> SLC Chamber of Commerse Directory</title>
+    <meta name="description"
+        content="The site shares event info, networking opportunities, business directories, and encourage shopping to support growth and community connection.">
     <meta name="author" content="Joseph Garlick">
+
 
 
     <link rel="icon" href="WDD231/images/favicon.ico">
     <!-- Links to css and JavaScript  -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/directory.js" defer></script>
+    <link rel="stylesheet" href="styles/homelarge.css">
+    <link rel="stylesheet" href="styles/homebase.css">
+    <script src="scripts/index.js" defer></script>
     <!-- google fonts code -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +32,10 @@
         href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <header>
         <img src="images/bank.svg" width="24" alt="Bank logo">
-        <h1>SLC Chamber of Commerse</h1>
+        <h1>SLC Chamber of Commerse Home Page</h1>
         <button id="ham-btn" class="hamburger" aria-label="Toggle navigation"></button>
         <nav id="nav-bar" class="navigation">
             <ul class="nav">
@@ -47,9 +47,31 @@
         </nav>
     </header>
     <main>
-        <button id="bar-btn" aria-label="Grid"></button>
-        <div id="cards"></div>
-        <!-- <div id="one-card"></div> -->
+        <div class="hero">
+            <img src="images/landscapecrop.png" alt="Brigham Young">
+            <button id="call" aria-label="call to action"></button>
+
+        </div>
+        <section class="events">
+            <div id="currentevents">
+                <h2>Current Events</h2>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <p>The current temperature in Salt Lake City is <span id="current-temp"></span></p>
+                <figure>
+                    <img id="weather-icon" src="" alt="">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <div id="weatherforcast"></div>
+        </section>
+        <section id="cards"></section>
+        <!-- <div id="cards"></div> -->
     </main>
     <footer>
         <div id="footerTitle">
@@ -60,7 +82,7 @@
                     alt="YouTube Logo"></a>
             <a href="https://www.linkedin.com/feed/" target="_blank"><img src="images/linkdin.png"
                     alt="YouTube Logo"></a>
-            <a href="https://x.com/" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://x.com/" target="_blank"><img src="images/realtwitter.png" alt="Twitter"></a>
         </div>
         <div class="content">
             <p>&copy;<span id="currentyear"></span> Joseph Garlick Utah / Last Modified: <span id="lastModified"></span>

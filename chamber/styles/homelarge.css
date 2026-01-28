@@ -1,0 +1,137 @@
+@media only screen and (min-width:38rem) {
+    body {
+        background-color: #F5F0E1;
+        font-family: "Roboto", sans-serif;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 44px auto auto;
+        align-items: center;
+        border: solid black;
+
+    }
+
+    .navigation {
+        display: flex;
+        /* I asked AI how to get rid of the bullet points in the list and it helped me out. */
+    }
+
+    .nav {
+        display: flex;
+        text-decoration: none;
+        justify-content: space-between;
+        /* I asked AI how to get rid of the bullet points in the list and it helped me out. */
+        list-style: none;
+    }
+
+    li {
+        padding: 18px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #ham-btn {
+        display: none;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    #footerTitle {
+        text-align: center;
+    }
+
+    .links {
+        text-align: center;
+
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    header div img {
+        width: 44px;
+        height: 44px;
+    }
+
+    footer div img {
+        width: 44px;
+        height: 44px;
+
+    }
+
+    #cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        place-items: center;
+        /* centers content inside each grid cell */
+        max-width: 1200px;
+        margin: 0 auto;
+        /* centers the grid itself on the page */
+    }
+
+    #cards.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #cards.hide {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        place-items: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #bar-btn::before {
+        content: "One Column Desplay";
+    }
+
+    #bar-btn.show::before {
+        content: "Grid Desplay";
+    }
+
+    section {
+        background-color: lightblue;
+        padding: 15px;
+    }
+    main {
+        position:relative;
+    }
+    main img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        position:relative;
+    }
+    #call::before {
+        content: "Join";
+    }
+    #call {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        padding: 10px 14px;
+        }
+    
+    .hero {
+        position: relative;
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+    .events {
+        display: flex;
+    }
+
+
+
+}
