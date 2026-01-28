@@ -101,6 +101,9 @@
     section {
         background-color: lightblue;
         padding: 15px;
+        display: flex;
+        justify-content: space-around;
+        
     }
     main {
         position:relative;

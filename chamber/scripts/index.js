@@ -123,7 +123,6 @@ function displayResults(data) {
     // 3 day weather forecas
     // Simple 3-day forecast display (uses current temp/icon as a base)
     (function renderThreeDayForecast() {
-        const parentFigure = captionDesc ? captionDesc.closest('figure') : (weather ? weather.parentElement : null);
         const forecastSection = document.getElementById('weatherforecast');
 
         const now = new Date();
@@ -157,12 +156,13 @@ function displayResults(data) {
             forecastSection.appendChild(card);
         }
 
-        //     if (parentFigure && parentFigure.parentNode) {
-        //         parentFigure.parentNode.insertBefore(forecastSection, parentFigure.nextSibling);
-        //     } else {
-        //         document.body.appendChild(forecastSection);
-        //     }
-    });
+        if (parentFigure && parentFigure.parentNode) {
+            parentFigure.parentNode.insertBefore(forecastSection, parentFigure.nextSibling);
+        } else {
+            document.body.appendChild(forecastSection);
+        }
+    })();
+    
 }
 
 apiFetch();
