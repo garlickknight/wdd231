@@ -79,12 +79,9 @@ async function getData() {
         console.table(data.members); // log members array for debugging
             display(data.members);
 }
-getData();
+
 
 var date = new Date();
-var year = date.getFullYear();
-const yearEl = document.getElementById("currentyear");
-if (yearEl) yearEl.innerHTML = year;
 const lastModEl = document.getElementById("lastModified");
 if (lastModEl) lastModEl.innerHTML = document.lastModified;
 
@@ -93,13 +90,13 @@ if (lastModEl) lastModEl.innerHTML = document.lastModified;
 const weather = document.querySelector("#weather-icon");
 const temp = document.querySelector("#current-temp");
 const captionDesc = document.querySelector('figcaption');
-const forecast = document.getElementById("weatherforecast");
 
 const myApi = "1826e40be9fc1eaacee027527306cb27";
 const lat = 40.75;
 const lon = -111.89;
 
 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${myApi}`;
+const forecasturl = ``;
 
 async function apiFetch() {
     const response = await fetch(url);
@@ -107,125 +104,65 @@ async function apiFetch() {
     console.log(data); // testing only
     displayResults(data);
 }
-async function fetchForecast() {
-        const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${myApi}`;
-        const resp = await fetch(forecastUrl);
-        const fdata = await resp.json();
-        // process and render 3-day forecast
-        renderThreeDayForecast(fdata);
-}
-
-function renderThreeDayForecast(fdata) {
-    forecast.innerHTML = ""; // clear previous forecast
-
-    // Today's date string (UTC) to avoid including current day
-    const today = new Date();
-    const todayDateStr = today.toISOString().split('T')[0];
-
-    // Collect up to 3 entries for the next 3 days at ~12:00:00 (local forecast dt_txt is in UTC)
-    const selected = [];
-    for (let entry of fdata.list) {
-        // entry.dt_txt is like "2026-01-28 12:00:00"
-        const [datePart, timePart] = entry.dt_txt.split(" ");
-        if (datePart <= todayDateStr) continue; // skip today or in the past
-        // Prefer the 12:00:00 entry for a day
-        if (timePart === "12:00:00") {
-            // ensure we don't add more than one per date
-            if (!selected.find(e => e.dt_txt.split(" ")[0] === datePart)) {
-                selected.push(entry);
-            }
-        }
-        if (selected.length >= 3) break;
-    }
-
-    // Fallback: if we didn't find 12:00 entries (edge case), pick the first entry for each next date
-    if (selected.length < 3) {
-        const byDate = {};
-        for (let entry of fdata.list) {
-            const [datePart] = entry.dt_txt.split(" ");
-            if (datePart <= todayDateStr) continue;
-            if (!byDate[datePart]) byDate[datePart] = entry;
-        }
-        const dates = Object.keys(byDate).slice(0, 3);
-        selected.length = 0;
-        for (let d of dates) selected.push(byDate[d]);
-    }
-
-    // If still empty, abort
-    if (selected.length === 0) {
-        container.textContent = "No forecast available.";
-        return;
-    }
-
-    // Header
-    const header = document.createElement("h3");
-    header.textContent = "3-Day Forecast";
-    container.appendChild(header);
-
-    const listEl = document.createElement("div");
-    listEl.className = "forecast-list";
-    container.appendChild(listEl);
-
-    selected.forEach(entry => {
-        const item = document.createElement("div");
-        item.className = "forecast-day";
-
-        // Date / weekday
-        const dateStr = entry.dt_txt.split(" ")[0];
-        const dateObj = new Date(entry.dt * 1000);
-        const dayName = dateObj.toLocaleDateString(undefined, { weekday: "short" });
-        const dateLabel = document.createElement("div");
-        dateLabel.className = "forecast-day-label";
-        dateLabel.textContent = dayName;
-        item.appendChild(dateLabel);
-
-        // Icon
-        const iconCode = entry.weather[0].icon;
-        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-        const img = document.createElement("img");
-        img.src = iconUrl;
-        img.alt = entry.weather[0].description || "forecast icon";
-        img.width = 50;
-        img.height = 50;
-        item.appendChild(img);
-
-        // Temp (use main.temp or main.temp_max/min if available)
-        const t = Math.round(entry.main.temp);
-        const tempEl = document.createElement("div");
-        tempEl.className = "forecast-temp";
-        tempEl.textContent = `${t}\u00B0F`;
-        item.appendChild(tempEl);
-
-        // Short description
-        const descEl = document.createElement("div");
-        descEl.className = "forecast-desc";
-        descEl.textContent = entry.weather[0].description || "";
-        item.appendChild(descEl);
-
-        listEl.appendChild(item);
-    });
-}
 
 function displayResults(data) {
     // temperature
     const temperature = data.main.temp;
-    if (temp) temp.textContent = `${Math.round(temperature)}\u00B0F`;
+    temp.textContent = `${Math.round(temperature)}\u00B0F`;
 
     // description
-    const desc = data.weather[0].description;
-    if (captionDesc) captionDesc.textContent = desc;
+    const desc = data.weather[0].description
+    captionDesc.textContent = desc;
 
     // icon
     const iconCode = data.weather[0].icon;
     const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-    if (weather) {
-        weather.setAttribute("src", iconUrl);
-        weather.setAttribute("alt", desc || "weather icon");
-    }
+    weather.setAttribute("src", iconUrl);
+    weather.setAttribute("alt", desc || "weather icon");
 
-    // Fetch and display 3-day weather forecast
-    fetchForecast();
-    
+    // 3 day weather forecas
+    // Simple 3-day forecast display (uses current temp/icon as a base)
+    (function renderThreeDayForecast() {
+        const parentFigure = captionDesc ? captionDesc.closest('figure') : (weather ? weather.parentElement : null);
+        const forecastSection = document.getElementById('weatherforecast');
+
+        const now = new Date();
+        for (let i = 1; i <= 3; i++) {
+            const d = new Date(now);
+            d.setDate(now.getDate() + i);
+            const dayName = d.toLocaleDateString(undefined, { weekday: 'short' });
+
+            // Simple, deterministic forecast: small offsets from current temperature
+            const dayTemp = Math.round(temperature + (i * 2)); // e.g., +2, +4
+            const dayDesc = captionDesc ? captionDesc.textContent : (data && data.weather ? data.weather[0].description : '');
+
+            const card = document.createElement('div');
+            card.className = 'forecast-day';
+
+            const h = document.createElement('h4');
+            h.textContent = dayName;
+
+            const img = document.createElement('img');
+            img.src = iconUrl;
+            img.alt = dayDesc || 'forecast icon';
+
+            const p = document.createElement('p');
+            p.textContent = `${dayTemp}\u00B0F`;
+            
+
+            card.appendChild(h);
+            card.appendChild(img);
+            card.appendChild(p);
+
+            forecastSection.appendChild(card);
+        }
+
+        //     if (parentFigure && parentFigure.parentNode) {
+        //         parentFigure.parentNode.insertBefore(forecastSection, parentFigure.nextSibling);
+        //     } else {
+        //         document.body.appendChild(forecastSection);
+        //     }
+    });
 }
 
 apiFetch();

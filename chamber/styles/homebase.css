@@ -109,5 +109,35 @@
     .events{
         display:flex;
     }
+    .events{
+        display:flex;
+    }
+
+    #weatherforecast {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+   
+    #weatherforecast img {
+        width: 48px;
+        height: 48px;
+        display: block;
+        margin: 0 auto 0.25rem auto;
+    }
+    #weather-icon {
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto 0.25rem auto;
+    }
+    p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+    .card {
+        text-align: center;
+        min-width: 80px;
+    }
 
 }
