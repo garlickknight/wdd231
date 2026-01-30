@@ -18,10 +18,9 @@
     callButton?.addEventListener("click", () => {
         callButton.classList.toggle("show");
     });
-    
+
     // Display members (clears container first)
     const display = (members = []) => {
-        if (!cardContainer) return;
         cardContainer.innerHTML = "";
 
         members.forEach((item) => {
@@ -69,17 +68,12 @@
         });
     };
 
-    // Fetch members.json with error handling
+    // Fetch members.json
     async function getData() {
-        try {
             const resp = await fetch("data/members.json");
-            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
             const data = await resp.json();
             console.table(data.members || []);
             display(data.members || []);
-        } catch (err) {
-            console.error("Failed to load members:", err);
-        }
     }
 
     getData();
@@ -99,36 +93,27 @@
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`;
 
     async function apiFetch() {
-        try {
             const resp = await fetch(url);
-            if (!resp.ok) throw new Error(`Weather HTTP ${resp.status}`);
             const data = await resp.json();
             console.log("weather:", data);
             displayResults(data);
-        } catch (err) {
-            console.error("Weather fetch failed:", err);
         }
-    }
 
     function displayResults(data = {}) {
-        if (!data.main || !data.weather || !data.weather[0]) return;
 
         const temperature = Math.round(data.main.temp);
-        if (tempEl) tempEl.textContent = `${temperature}\u00B0F`;
+        tempEl.textContent = `${temperature}\u00B0F`;
 
         const desc = data.weather[0].description || "";
-        if (captionDesc) captionDesc.textContent = desc;
+        captionDesc.textContent = desc;
 
         const iconCode = data.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-        if (weatherImg) {
-            weatherImg.src = iconUrl;
-            weatherImg.alt = desc || "weather icon";
-            weatherImg.loading = "lazy";
-        }
+        weatherImg.src = iconUrl;
+        weatherImg.alt = desc || "weather icon";
+        weatherImg.loading = "lazy";
 
         // Simple 3-day forecast (deterministic offsets)
-        if (!forecastSection) return;
         forecastSection.innerHTML = "";
         const now = new Date();
 
@@ -139,16 +124,16 @@
             const dayTemp = temperature + i * 2; // small offset
             const dayDesc = desc;
 
-            const card = el("div", "forecast-day");
-            const h = el("h4");
+            const card = ("div", "forecast-day");
+            const h = ("h4");
             h.textContent = dayName;
 
-            const img = el("img");
+            const img = ("img");
             img.src = iconUrl;
             img.alt = dayDesc || "forecast icon";
             img.loading = "lazy";
 
-            const p = el("p");
+            const p = ("p");
             p.textContent = `${Math.round(dayTemp)}\u00B0F`;
 
             card.appendChild(h);
