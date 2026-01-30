@@ -105,20 +105,24 @@
     }
 
     function displayResults(data = {}) {
+        if (!data.main || !data.weather || !data.weather[0]) return;
 
         const temperature = Math.round(data.main.temp);
-        tempEl.textContent = `${temperature}\u00B0F`;
+        if (tempEl) tempEl.textContent = `${temperature}\u00B0F`;
 
         const desc = data.weather[0].description || "";
-        captionDesc.textContent = desc;
+        if (captionDesc) captionDesc.textContent = desc;
 
         const iconCode = data.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+        if (weatherImg) {
             weatherImg.src = iconUrl;
             weatherImg.alt = desc || "weather icon";
             weatherImg.loading = "lazy";
+        }
 
         // Simple 3-day forecast (deterministic offsets)
+        if (!forecastSection) return;
         forecastSection.innerHTML = "";
         const now = new Date();
 
