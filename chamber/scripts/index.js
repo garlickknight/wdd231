@@ -19,29 +19,32 @@
         callButton.classList.toggle("show");
     });
 
+    // Utility to create element with optional class
+    const el = (tag, className) => {
+        const e = document.createElement(tag);
+        if (className) e.className = className;
+        return e;
+    };
+
     // Display members (clears container first)
     const display = (members = []) => {
         cardContainer.innerHTML = "";
+        // Shuffle copy of members (Fisher-Yates) and take up to 3
+        const pool = members.slice();
+        for (let i = pool.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [pool[i], pool[j]] = [pool[j], pool[i]];
+        }
+        const toShow = pool.slice(0, Math.min(3, pool.length));
 
-        members.forEach((item) => {
-            const section = document.createElement("section");
-            section.className = "member-card";
-
-            const name = document.createElement("h2");
-
-            const img = document.createElement("img");
-            img.className = "member-icon";
-
-            const address = document.createElement("p");
-            address.className = "member-address";
-
-            const phone = document.createElement("p");
-            phone.className = "member-phone";
-
-            const linkHolder = document.createElement("p");
-            linkHolder.className = "member-website";
-
-            const link = document.createElement("a");
+        toShow.forEach((item) => {
+            const section = el("section", "member-card");
+            const name = el("h2");
+            const img = el("img", "member-icon");
+            const address = el("p", "member-address");
+            const phone = el("p", "member-phone");
+            const linkHolder = el("p", "member-website");
+            const link = el("a");
 
             name.textContent = item.name || "No name";
             img.src = item.icon || "";
@@ -68,9 +71,10 @@
         });
     };
 
-    // Fetch members.json
+    // Fetch members.json with error handling
     async function getData() {
             const resp = await fetch("data/members.json");
+            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
             const data = await resp.json();
             console.table(data.members || []);
             display(data.members || []);
@@ -94,10 +98,11 @@
 
     async function apiFetch() {
             const resp = await fetch(url);
+            if (!resp.ok) throw new Error(`Weather HTTP ${resp.status}`);
             const data = await resp.json();
             console.log("weather:", data);
             displayResults(data);
-        }
+    }
 
     function displayResults(data = {}) {
 
@@ -109,9 +114,9 @@
 
         const iconCode = data.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-        weatherImg.src = iconUrl;
-        weatherImg.alt = desc || "weather icon";
-        weatherImg.loading = "lazy";
+            weatherImg.src = iconUrl;
+            weatherImg.alt = desc || "weather icon";
+            weatherImg.loading = "lazy";
 
         // Simple 3-day forecast (deterministic offsets)
         forecastSection.innerHTML = "";
@@ -124,16 +129,16 @@
             const dayTemp = temperature + i * 2; // small offset
             const dayDesc = desc;
 
-            const card = ("div", "forecast-day");
-            const h = ("h4");
+            const card = el("div", "forecast-day");
+            const h = el("h4");
             h.textContent = dayName;
 
-            const img = ("img");
+            const img = el("img");
             img.src = iconUrl;
             img.alt = dayDesc || "forecast icon";
             img.loading = "lazy";
 
-            const p = ("p");
+            const p = el("p");
             p.textContent = `${Math.round(dayTemp)}\u00B0F`;
 
             card.appendChild(h);
