@@ -67,28 +67,21 @@
 
     #cards {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr; /* single column */
         gap: 1rem;
-        place-items: center;
-        /* centers content inside each grid cell */
+        place-items: center; /* centers items horizontally; change to align-items: start to left-align */
         max-width: 1200px;
         margin: 0 auto;
-        /* centers the grid itself on the page */
-    }
+        width: 100%;
+        }
 
-    #cards.show {
+        /* make each card's contents stack vertically */
+        #cards > * {
         display: flex;
         flex-direction: column;
-    }
-
-    #cards.hide {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        place-items: center;
-        max-width: 600px;
-        margin: 0 auto;
-    }
+        gap: 0.5rem; /* space between elements inside a card */
+        align-items: center; /* use flex-start to left-align card contents */
+        }
 
     #bar-btn::before {
         content: "One Column Desplay";

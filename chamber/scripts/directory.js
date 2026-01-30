@@ -1,7 +1,6 @@
 const navbutton = document.querySelector("#ham-btn");
 const navBar = document.querySelector("#nav-bar");
 const barbutton = document.querySelector("#bar-btn");
-const cards = document.querySelector("#cards");
 const one = document.querySelector("#one-card");
 
 navbutton.addEventListener('click', () => {
