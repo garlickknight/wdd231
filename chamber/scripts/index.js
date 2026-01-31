@@ -1,92 +1,10 @@
-// index.js (refactored)
-// GitHub Copilot
-
-(() => {
-    // Query elements (guarded)
+// I used AI to see ideas on how to complete the assignment, but I ended  using what i found to be best, and I wrote most of the code. 
     const navButton = document.querySelector("#ham-btn");
     const navBar = document.querySelector("#nav-bar");
     const callButton = document.querySelector("#call");
     const cardContainer = document.getElementById("cards");
     const lastModEl = document.getElementById("lastModified");
-
-    // Safe event listeners
-    navButton?.addEventListener("click", () => {
-        navButton.classList.toggle("show");
-        navBar?.classList.toggle("show");
-    });
-
-    callButton?.addEventListener("click", () => {
-        callButton.classList.toggle("show");
-    });
-
-    // Utility to create element with optional class
-    const el = (tag, className) => {
-        const e = document.createElement(tag);
-        if (className) e.className = className;
-        return e;
-    };
-
-    // Display members (clears container first)
-    const display = (members = []) => {
-        cardContainer.innerHTML = "";
-        // Shuffle copy of members (Fisher-Yates) and take up to 3
-        const pool = members.slice();
-        for (let i = pool.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [pool[i], pool[j]] = [pool[j], pool[i]];
-        }
-        const toShow = pool.slice(0, Math.min(3, pool.length));
-
-        toShow.forEach((item) => {
-            const section = el("section", "member-card");
-            const name = el("h2");
-            const img = el("img", "member-icon");
-            const address = el("p", "member-address");
-            const phone = el("p", "member-phone");
-            const linkHolder = el("p", "member-website");
-            const link = el("a");
-
-            name.textContent = item.name || "No name";
-            img.src = item.icon || "";
-            img.alt = `${item.name || "Member"} icon`;
-            img.loading = "lazy";
-            address.textContent = item.address || "";
-            phone.textContent = item.phone || "";
-            link.textContent = item.website || "Website";
-            if (item.website) {
-                link.href = item.website;
-                link.target = "_blank";
-                link.rel = "noopener noreferrer";
-            }
-
-            linkHolder.appendChild(link);
-
-            section.appendChild(name);
-            section.appendChild(img);
-            section.appendChild(address);
-            section.appendChild(phone);
-            section.appendChild(linkHolder);
-
-            cardContainer.appendChild(section);
-        });
-    };
-
-    // Fetch members.json with error handling
-    async function getData() {
-            const resp = await fetch("data/members.json");
-            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-            const data = await resp.json();
-            console.table(data.members || []);
-            display(data.members || []);
-    }
-
-    getData();
-
-    // Last modified
-    if (lastModEl) lastModEl.textContent = document.lastModified;
-
-    // Weather (with error handling and simple 3-day forecast)
-    const weatherImg = document.querySelector("#weather-icon");
+    const weatherImg = document.querySelector("#icon");
     const tempEl = document.querySelector("#current-temp");
     const captionDesc = document.querySelector("figcaption");
     const forecastSection = document.getElementById("weatherforecast");
@@ -94,64 +12,114 @@
     const API_KEY = "1826e40be9fc1eaacee027527306cb27";
     const lat = 40.75;
     const lon = -111.89;
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`;
-
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`;
+    
+    // Fetch members.json with error handling (AI written)
+    async function getData() {
+        const resp = await fetch("data/members.json");
+        const data = await resp.json();
+        console.table(data.members);
+        display(data.members);
+}
+    //self written
     async function apiFetch() {
-            const resp = await fetch(url);
-            if (!resp.ok) throw new Error(`Weather HTTP ${resp.status}`);
-            const data = await resp.json();
-            console.log("weather:", data);
-            displayResults(data);
+        const resp = await fetch(url);
+        const data = await resp.json();
+        console.log("weather:", data);
+        displayResults(data);
     }
 
-    function displayResults(data = {}) {
-        if (!data.main || !data.weather || !data.weather[0]) return;
+    // Safe event listeners (self written)
+    navButton.addEventListener("click", () => {
+        navButton.classList.toggle("show");
+        navBar?.classList.toggle("show");
+    });
+    //self written
+    callButton.addEventListener("click", () => {
+        callButton.classList.toggle("show");
+    });
 
-        const temperature = Math.round(data.main.temp);
-        if (tempEl) tempEl.textContent = `${temperature}\u00B0F`;
+    // Display members (clears container first) (self written)
+const display = (members = []) => {
+    cardContainer.innerHTML = "";
+    // AI assisted to help me learn the slice concept (I wrote the code).
+    const toShow = members.slice(0, 3);
+    // self written
+    toShow.forEach(item => {
+        const section = document.createElement('section');
+        const name = document.createElement('h2');
+        const img = document.createElement('img');
+        const address = document.createElement('p');
+        const phone = document.createElement('p');
+        const linkHolder = document.createElement('p');
+        const link = document.createElement("a");
 
-        const desc = data.weather[0].description || "";
-        if (captionDesc) captionDesc.textContent = desc;
+        name.textContent = item.name;
+        img.setAttribute("src", item.icon);
+        img.setAttribute("alt", `${item.name} icon`);
+        address.textContent = item.address;
+        phone.textContent = item.phone;
+        link.textContent = item.website;
+        link.setAttribute("href", item.website);
 
-        const iconCode = data.weather[0].icon;
-        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-        if (weatherImg) {
-            weatherImg.src = iconUrl;
-            weatherImg.alt = desc || "weather icon";
-            weatherImg.loading = "lazy";
-        }
+        linkHolder.appendChild(link);
 
-        // Simple 3-day forecast (deterministic offsets)
-        if (!forecastSection) return;
-        forecastSection.innerHTML = "";
-        const now = new Date();
+        section.appendChild(name);
+        section.appendChild(img);
+        section.appendChild(address);
+        section.appendChild(phone);
+        section.appendChild(linkHolder);
+        cardContainer.appendChild(section);
+    });
+};
 
-        for (let i = 1; i <= 3; i++) {
-            const d = new Date(now);
-            d.setDate(now.getDate() + i);
-            const dayName = d.toLocaleDateString(undefined, { weekday: "short" });
-            const dayTemp = temperature + i * 2; // small offset
-            const dayDesc = desc;
+getData();
 
-            const card = el("div", "forecast-day");
-            const h = el("h4");
-            h.textContent = dayName;
+// I wrote this code, and I talked about places that AI helped me out. 
+function displayResults(data = {}) {
+    const tempature = Math.round(data.main.temp);
+    tempEl.textContent = `${tempature}\u00B0F`;
+    //AI asisted me by helping me figure out why I couldnt desplay my weather icon on my screen.
+    // I did not understand that I needed to pull the image from another place on the API.
+    // I thought I just needed the icon code and that would desplay the image.
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    let img = weatherImg.src = iconUrl;
+    let weatherDescription = data.weather[0].description;
+    captionDesc.textContent = weatherDescription;
+    forecastSection.innerHTML = "";
 
-            const img = el("img");
-            img.src = iconUrl;
-            img.alt = dayDesc || "forecast icon";
-            img.loading = "lazy";
+    // AI helped me with syntax and organizaton.
+    const now = new Date();
+    for (let i = 1; i <= 3; i++){
+        const date = new Date(now);
+        date.setDate(now.getDate() + i);
+        const dayName = date.toLocaleDateString(undefined, { weekday: "short" });
+        const dayTemp = tempature + i * 2;
+        // use a fallback to the current description to avoid accessing undefined entries (created by AI)
+        const dayDesc = data.weather[i]?.description || weatherDescription;
 
-            const p = el("p");
-            p.textContent = `${Math.round(dayTemp)}\u00B0F`;
+        const card = document.createElement('div');
+        const day = document.createElement('h2');
+        const forcastIcon = document.createElement('img');
+        const forcastTemp = document.createElement('p');
 
-            card.appendChild(h);
-            card.appendChild(img);
-            card.appendChild(p);
+        day.textContent = dayName;
+        forcastIcon.setAttribute('src', img);
+        forcastIcon.setAttribute('alt', dayDesc);
 
-            forecastSection.appendChild(card);
-        }
+        forcastTemp.textContent = `${dayTemp}\u00B0F`;
+
+        card.appendChild(day);
+        card.appendChild(forcastIcon);
+        card.appendChild(forcastTemp);
+
+        forecastSection.appendChild(card);
     }
+}
 
-    apiFetch();
-})();
+
+apiFetch();
+    
+// Last modified
+if (lastModEl) lastModEl.textContent = document.lastModified;
