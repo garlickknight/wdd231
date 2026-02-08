@@ -51,19 +51,19 @@
     <main>
         <section>
             <h2>Join</h2>
-            <form>
-                <label>First Name:  <input id="fName" required></label>
-                <label>Last Name:   <input id="lName" required></label>
-                <label>Organization Title:  <input id="feild"></label>
-                <label>Email:   <input id="email" required></label>
-                <label>Phone Number:    <input id="phoneNumber" required></label>
-                <label>Business Name:   <input id="busiessName" required></label>
+            <form method="get" action="thankyou.html">
+                <label>First Name:  <input id="fName" required autocomplete="given-name"></label>
+                <label>Last Name:   <input id="lName" required autocomplete="family-name"></label>
+                <label>Organization Title:  <input id="feild" autocomplete="organization-title"></label>
+                <label>Email:   <input id="email" type="email"></label>
+                <label>Phone Number:    <input id="phoneNumber" type="tel"></label>
+                <label>Business Name:   <input id="busiessName" autocomplete="organization" required></label>
                 <label>Membership Level:    <select id="mlevel">
-                    <option value = "">Select a level...</option>
-                    <option value ="1">level 1</option>
-                    <option value ="2">level 2</option>
-                    <option value="3">level 3</option>
-                    <option value="4">level 4</option>
+                    <option value = "np">Select a level...</option>
+                    <option value ="bronze">level 1</option>
+                    <option value ="silver">level 2</option>
+                    <option value="gold">level 3</option>
+                    
                 </select></label>
                 <label>Description: <textarea id="businessDescription" ></textarea></label>
                 <!-- time stamp?? </label>-->
