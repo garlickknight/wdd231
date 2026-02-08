@@ -52,22 +52,22 @@
         <section>
             <h2>Join SLC Chamber of Commerse</h2>
             <form method="get" action="thankyou.html">
-                <label>First Name:  <input id="fName" required autocomplete="given-name"></label>
-                <label>Last Name:   <input id="lName" required autocomplete="family-name"></label>
-                <label>Organization Title:  <input id="feild" autocomplete="organization-title"></label>
-                <label>Email:   <input id="email" type="email"></label>
-                <label>Phone Number:    <input id="phoneNumber" type="tel"></label>
-                <label>Business Name:   <input id="busiessName" autocomplete="organization" required></label>
-                <label>Membership Level:    <select id="mlevel">
+                <label>First Name:  <input id="fName" name="fName" title="First Name" type="text" required autocomplete="given-name"></label>
+                <label>Last Name:   <input id="lName" name="lName" title="Last Name" type="text" required autocomplete="family-name"></label>
+                <label>Organization Title:  <input id="feild" name="feild" title="Organization Title" type="text" autocomplete="organization-title"></label>
+                <label>Email:   <input id="email" name="email" title="Email Address" type="email" required autocomplete="email" placeholder="name@example.com"></label>
+                <label>Phone Number:    <input id="phoneNumber" name="phoneNumber" title="Mobile Phone" type="tel" required autocomplete="tel"></label>
+                <label>Business Name:   <input id="busiessName" name="busiessName" title="Organization Name" type="text" autocomplete="organization" required></label>
+                <label>Membership Level:    <select id="mlevel" name="mlevel" title="Membership Level">
                     <option value = "np">Select a level...</option>
                     <option value ="bronze">level 1</option>
                     <option value ="silver">level 2</option>
                     <option value="gold">level 3</option>
                     
                 </select></label>
-                <label>Description: <textarea id="businessDescription" ></textarea></label>
-                <!-- time stamp?? </label>-->
-                <label><button id="submit">Submit</button></label>
+                <label>Description: <textarea id="businessDescription" name="businessDescription" title="Organization Description"></textarea></label>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <label><button type="submit">Submit</button></label>
             </form>
         </section>
         <div id="mem"></div>
