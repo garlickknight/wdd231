@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Salt Lake City Chamber of Comerse">
+    <meta property="og:description"
+        content="The site shares info, networking opportunities, business directories, and encourage shopping to support growth and community connection.">
+    <meta property="og:image" content="https://garlickknight.github.io/wdd231/chamber/images/slctemp.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://garlickknight.github.io/wdd131/chamber/directory.html">
+
+
+    <title> SLC Chamber of Commerse Directory</title>
+    <meta name="description"
+        content="The site shares event info, networking opportunities, business directories, and encourage shopping to support growth and community connection.">
+    <meta name="author" content="Joseph Garlick">
+
+
+
+    <link rel="icon" href="WDD231/images/favicon.ico">
+    <!-- Links to css and JavaScript  -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/joinlarge.css">
+    <link rel="stylesheet" href="styles/joinbase.css">
+    <script src="scripts/join.js" defer></script>
+    <!-- google fonts code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="images/bank.svg" width="24" alt="Bank logo">
+        <h1>SLC Chamber of Commerse Home Page</h1>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Join</h2>
+            <form>
+                <label>First Name:  <input id="fName" required></label>
+                <label>Last Name:   <input id="lName" required></label>
+                <label>Organization Title:  <input id="feild"></label>
+                <label>Email:   <input id="email" required></label>
+                <label>Phone Number:    <input id="phoneNumber" required></label>
+                <label>Business Name:   <input id="busiessName" required></label>
+                <label>Membership Level:    <select id="Membership Level">
+                    <option value = "">Select a level...</option>
+                    <option value ="1">level 1</option>
+                    <option value ="2">level 2</option>
+                    <option value="3">level 3</option>
+                    <option value="4">level 4</option>
+                </select></label>
+                <label>Description: <textarea id="businessDescription" ></textarea></label>
+                <!-- time stamp?? </label>-->
+                <label></label><button id="submition-btn">Submit</button></label>
+            </form>
+        </section>
+        <div id="mem"></div>
+    </main>
+    <footer>
+        <div id="footerTitle">
+            <h2>Salt Lake City Chamber of Commerse</h2>
+        </div>
+        <div class="links">
+            <a href="https://www.youtube.com/feed/storefront" target="_blank"><img src="images/youtube.png"
+                    alt="YouTube Logo"></a>
+            <a href="https://www.linkedin.com/feed/" target="_blank"><img src="images/linkdin.png"
+                    alt="YouTube Logo"></a>
+            <a href="https://x.com/" target="_blank"><img src="images/realtwitter.png" alt="Twitter"></a>
+        </div>
+        <div class="content">
+            <p>&copy;<span id="currentyear"></span> Joseph Garlick Utah / Last Modified: <span id="lastModified"></span>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

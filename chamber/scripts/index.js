@@ -1,45 +1,45 @@
 // I used AI to see ideas on how to complete the assignment, but I ended  using what i found to be best, and I wrote most of the code. 
-    const navButton = document.querySelector("#ham-btn");
-    const navBar = document.querySelector("#nav-bar");
-    const callButton = document.querySelector("#call");
-    const cardContainer = document.getElementById("cards");
-    const lastModEl = document.getElementById("lastModified");
-    const weatherImg = document.querySelector("#icon");
-    const tempEl = document.querySelector("#current-temp");
-    const captionDesc = document.querySelector("figcaption");
-    const forecastSection = document.getElementById("weatherforecast");
+const navButton = document.querySelector("#ham-btn");
+const navBar = document.querySelector("#nav-bar");
+const callButton = document.querySelector("#call");
+const cardContainer = document.getElementById("cards");
+const lastModEl = document.getElementById("lastModified");
+const weatherImg = document.querySelector("#icon");
+const tempEl = document.querySelector("#current-temp");
+const captionDesc = document.querySelector("figcaption");
+const forecastSection = document.getElementById("weatherforecast");
 
-    const API_KEY = "1826e40be9fc1eaacee027527306cb27";
-    const lat = 40.75;
-    const lon = -111.89;
+const API_KEY = "1826e40be9fc1eaacee027527306cb27";
+const lat = 40.75;
+const lon = -111.89;
 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`;
-    
-    // Fetch members.json with error handling (AI written)
-    async function getData() {
-        const resp = await fetch("data/members.json");
-        const data = await resp.json();
-        console.table(data.members);
-        display(data.members);
+
+// Fetch members.json with error handling (AI written)
+async function getData() {
+    const resp = await fetch("data/members.json");
+    const data = await resp.json();
+    console.table(data.members);
+    display(data.members);
 }
-    //self written
-    async function apiFetch() {
-        const resp = await fetch(url);
-        const data = await resp.json();
-        console.log("weather:", data);
-        displayResults(data);
-    }
+//self written
+async function apiFetch() {
+    const resp = await fetch(url);
+    const data = await resp.json();
+    console.log("weather:", data);
+    displayResults(data);
+}
 
-    // Safe event listeners (self written)
-    navButton.addEventListener("click", () => {
-        navButton.classList.toggle("show");
-        navBar?.classList.toggle("show");
-    });
-    //self written
-    callButton.addEventListener("click", () => {
-        callButton.classList.toggle("show");
-    });
+// Safe event listeners (self written)
+navButton.addEventListener("click", () => {
+    navButton.classList.toggle("show");
+    navBar?.classList.toggle("show");
+});
+//self written
+callButton.addEventListener("click", () => {
+    callButton.classList.toggle("show");
+});
 
-    // Display members (clears container first) (self written)
+// Display members (clears container first) (self written)
 const display = (members = []) => {
     cardContainer.innerHTML = "";
     // AI assisted to help me learn the slice concept (I wrote the code).
@@ -91,7 +91,7 @@ function displayResults(data = {}) {
 
     // AI helped me with syntax and organizaton.
     const now = new Date();
-    for (let i = 1; i <= 3; i++){
+    for (let i = 1; i <= 3; i++) {
         const date = new Date(now);
         date.setDate(now.getDate() + i);
         const dayName = date.toLocaleDateString(undefined, { weekday: "short" });
@@ -120,6 +120,32 @@ function displayResults(data = {}) {
 
 
 apiFetch();
-    
+
+//dialog code 
+const modal = document.querySelector("#course-details");
+const openbtn = document.querySelector("#open-btn");
+
+function desplayCourse(course) {
+    modal.innerHTML = "";
+    modal.innerHTML = `
+    <button id="dialog-button">Close</button>
+    <h2>${course.subject} ${course.courseNum}</h2>
+    <h3>${course.courseTitle}</h3>
+    <p>${course.credits}</p>
+    <p>${course.description}</p>
+    <p>${course.certificate}</p>
+    <p>${course.technology.join(',')}</p>`;
+}
+
+openbtn.addEventListener("click", () => {
+    modal.showModal()
+    modal.desplayCourse(course)
+});
+const button = document.querySelector("#dialog-button");
+button.addEventListener("click", () => {
+    modal.close();
+});
+
+
 // Last modified
 if (lastModEl) lastModEl.textContent = document.lastModified;
