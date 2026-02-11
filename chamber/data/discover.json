@@ -1,0 +1,53 @@
+{
+    "members": [
+        {
+            "name": "Utah Jazz",
+            "address": "301 S Temple, Salt Lake City, UT 84101",
+            "description": "The Utah Jazz are a professional Basketball team that plays in the NBA. It is located in Utah, known for their dominant era in the 1990s with Hall of Famers Karl Malone and John Stockton, reaching the NBA Finals twice (1997, 1998), and multiple division championships.", 
+            "image": "images/Jazz.webp"
+        },
+        {
+            "name": "Park City Utah",
+            "address": "1910 Prospector Ave, Park City, UT 84060",
+            "description": "park City is a world-renowned mountain resort town famous for skiing, the Sundance Film Festival, and year-round outdoor recreation. Located in the Wasatch Mountains, it hosted events during the 2002 Winter Olympics and features historic Main Street with galleries, restaurants, and shops.", 
+            "image": "images/parkcity.webp"
+        },
+        {
+            "name": "Salt Lake Temple",
+            "address": "50 W North Temple, Salt Lake City, UT 84150",
+            "description": "The Salt Lake Temple was created by the Church of Jesus Christ of Latter-day Saints. The temple took 40 years to build, and its completion was in the 1893. The temple is there to provide everyone with the opportunity to receive the blessings associated with the Gospel of Jesus Christ.", 
+            "image": "images/slctemple.webp"
+        },
+        {
+            "name": "Utah Mammoths",
+            "address": "301 W South Temple, Salt Lake City, UT 84101",
+            "description": "The Utah Mammoths are a professional hockey team that came to Utah in April of 2024.", 
+            "image": "images/utahmammoths.webp"
+            
+        },
+        {
+            "name": "Timpanogos Mountain",
+            "address": "Timpanogos Cave National Monument, American Fork, UT 84003",
+            "description": "Timpanogos is a beautiful mountian located in Utah just an hour away from Salt Lake City.", 
+            "image": "images/mounttimp.webp"
+        },
+        {
+            "name": "BYU",
+            "address": "Provo, UT 84602",
+            "description": "BYU (Brigham Young University) is a college that was founded by one of the early settlers in Utah, Brigham Young. The College is located just 45 miles away from SLC.", 
+            "image":"images/byu.webp"
+        },
+        {
+            "name": "University of Utah",
+            "address": "201 Presidents Cir, Salt Lake City, UT 84112",
+            "description": "University of Utah is a college located within Salt lake city.", 
+            "image": "images/utahutes.webp"
+        },
+        {
+            "name": "This Is The Place Heritage Park",
+            "address": "2601 Sunnyside Ave, Salt Lake City, UT 84108",
+            "description": "THis is the place heritage park is located in salt lake city, and it is a monument created for the early pioneers who settled in Salt Lake City Utah. ", 
+            "image":"images/pioneers.webp"
+    }
+    ]
+}

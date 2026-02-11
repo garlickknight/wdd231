@@ -1,0 +1,68 @@
+@media screen and (max-width:640px) {
+    body {
+        background-color: #F5F0E1;
+        font-family: "Roboto", sans-serif;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 24px auto auto;
+        align-items: center;
+        justify-content: space-around;
+        border: solid black;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    footer {
+        border: solid black;
+    }
+
+    #ham-btn::before {
+        content: "\2630";
+
+    }
+
+    #ham-btn.show::before {
+        content: "\00D7"
+
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.show {
+        display: flex;
+
+    }
+
+    .navigation li {
+        list-style-type: none;
+        padding: 2px;
+
+    }
+
+    header div img {
+        width: 44px;
+        height: 44px;
+    }
+
+    footer div img {
+        width: 44px;
+        height: 44px;
+
+    }
+
+    #card-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section {
+        background-color: lightblue;
+        padding: 15px;
+    }
+
+}
