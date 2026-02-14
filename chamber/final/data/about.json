@@ -1,0 +1,82 @@
+{
+    "treatments": [
+        {
+            "id": "redlight",
+            "title": "Red Light Therapy",
+            "image": "images/redlight.jpg",
+            "alt": "Red light therapy device",
+            "description": "Low-level red and near-infrared light applied to skin to stimulate cellular repair and reduce inflammation. Commonly used for wound healing, pain reduction, and improving tissue recovery.",
+            "details": [
+                "How it works: photons absorbed by mitochondria increase ATP production and modulate inflammation.",
+                "Benefits: reduced pain, faster healing, improved circulation.",
+                "Typical session: 5–20 minutes depending on device intensity and treatment area.",
+                "Precautions: avoid direct eye exposure; consult if pregnant or on photosensitizing medication."
+            ]
+        },
+        {
+            "id": "stretching",
+            "title": "Stretching",
+            "image": "images/redlight.jpg",
+            "alt": "Stretching",
+            "description": "Targeted stretches improve flexibility, range of motion, and muscle balance. Used to prevent injury, relieve tightness, and support rehabilitation.",
+            "details": [
+                "Types: static, dynamic, and proprioceptive neuromuscular facilitation (PNF).",
+                "Benefits: increased mobility, reduced muscle tension, better posture.",
+                "How to: hold static stretches 15–60 seconds; use controlled movement for dynamic stretches.",
+                "Precautions: avoid forcing a stretch through sharp pain; warm up before intense stretching."
+            ]
+        },
+        {
+            "id": "exercise",
+            "title": "Therapeutic Exercise",
+            "image": "images/redlight.jpg",
+            "alt": "Man Exercising",
+            "description": "Individualized exercise programs to restore strength, coordination, and functional movement patterns. Exercises progress from basic activation to functional and sport-specific tasks.",
+            "details": [
+                "Benefits: increased strength, endurance, functional independence, and injury prevention.",
+                "Components: mobility, stability, strength, cardiovascular, and neuromuscular retraining.",
+                "Typical plan: frequency and intensity tailored to condition and stage of recovery.",
+                "Precautions: follow professional guidance to avoid overload and improper form."
+            ]
+        },
+        {
+            "id": "estim",
+            "title": "Electrical Stimulation (E-Stim)",
+            "image": "images/redlight.jpg",
+            "alt": "E-Stim",
+            "description": "Therapeutic electrical currents applied through the skin to reduce pain, promote muscle activation, and support tissue healing.",
+            "details": [
+                "Modes: TENS for pain control, NMES for muscle re-education, IFC for deep tissue stimulation.",
+                "Benefits: immediate pain relief, improved muscle recruitment, reduced swelling in some cases.",
+                "How it's used: electrodes placed over target muscles or nerves; intensity adjusted to comfort and therapeutic goals.",
+                "Precautions: not for use over pacemakers, carotid sinus, pregnant abdomen, or open wounds without guidance."
+            ]
+        },
+        {
+            "id": "guasha-astym",
+            "title": "Gua Sha & ASTYM",
+            "image": "images/redlight.jpg",
+            "alt": "ASTYM Therapy",
+            "description": "Manual and instrument-assisted techniques that address soft-tissue restrictions and scar tissue to improve mobility and reduce pain.",
+            "details": [
+                "Gua Sha: scraping with a smooth-edged tool to move stagnant tissue and increase circulation.",
+                "ASTYM: a structured, instrument-assisted protocol to promote remodeling of scar tissue and stimulate healing.",
+                "Benefits: improved tissue mobility, decreased pain, restoration of painless movement patterns.",
+                "Precautions: may cause temporary redness or soreness; consult provider for fragile skin, bleeding disorders, or anticoagulant use."
+            ]
+        },
+        {
+            "id": "massage",
+            "title": "Massage",
+            "image": "images/redlight.jpg",
+            "alt": "massage therapy",
+            "description": "Manual and instrument-assisted techniques that address soft-tissue restrictions and scar tissue to improve mobility and reduce pain.",
+            "details": [
+                "Gua Sha: scraping with a smooth-edged tool to move stagnant tissue and increase circulation.",
+                "ASTYM: a structured, instrument-assisted protocol to promote remodeling of scar tissue and stimulate healing.",
+                "Benefits: improved tissue mobility, decreased pain, restoration of painless movement patterns.",
+                "Precautions: may cause temporary redness or soreness; consult provider for fragile skin, bleeding disorders, or anticoagulant use."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Joseph Garlick" />
+    <meta name="description" content="This is my final project for the WDD 231 course" />
+    <link rel="stylesheet" href="styles/joinfinal.css">
+    <link rel="stylesheet" href="styles/joinmed.css">
+    <link rel="stylesheet" href="styles/joinlarge.css">
+    <script src="scripts/join.js" defer></script>
+    <title>Final Project</title>
+</head>
+
+<body>
+    <header id="head">
+        <h1>Point of the Mountian Physical Therapy</h1>
+        <button class="ham-btn" id="ham-btn"></button>
+        <nav class="nav-bar" id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="form">
+           <div id="application"><h2>Apply</h2>
+        <form method="get" action="thankyou.html">
+            <label>First Name: <input id="fName" name="fName" title="First Name" type="text" required
+                    autocomplete="given-name"></label>
+            <label>Last Name: <input id="lName" name="lName" title="Last Name" type="text" required
+                    autocomplete="family-name"></label>
+            <label>Email: <input id="email" name="email" title="Email Address" type="email" required autocomplete="email"
+                    placeholder="name@example.com"></label>
+            <label>Phone Number: <input id="phoneNumber" name="phoneNumber" title="Mobile Phone" type="tel" required
+                    autocomplete="tel"></label>
+            <label>What makes sparked your interest in working for our company?</label>
+            <textarea id="input" name="input" title="Interest Question" rows="5"></textarea>
+            <label>Position: <select id="mlevel" name="mlevel" title="Membership Level">
+                    <option value="select">Select a Postition...</option>
+                    <option value="PT">Physical Therapist</option>
+                    <option value="PTA">Physical Therapist assistant</option>
+                    <option value="PTaid">Physical Therapy Aid</option>
+                    <option value="Receptionist">Receptionist</option>
+                </select></label>
+            <label><button type="submit">Submit</button></label>
+        </form></div>
+
+        <div id="appointment">
+            <h2>Schedule an Appointment</h2>
+            <form method="get" action="">
+                <label>First Name: <input id="fName" name="fName" title="First Name" type="text" required
+                        autocomplete="given-name"></label>
+                <label>Last Name: <input id="lName" name="lName" title="Last Name" type="text" required
+                        autocomplete="family-name"></label>
+                <label>Email: <input id="email" name="email" title="Email Address" type="email" required autocomplete="email"
+                        placeholder="name@example.com"></label>
+                <label>Phone Number: <input id="phoneNumber" name="phoneNumber" title="Mobile Phone" type="tel" required
+                        autocomplete="tel"></label>
+                <label>What area of your body is hurt?</label>
+                <textarea id="input" name="input" title="area"></textarea>
+                <label>When did the injury occur and How did it happen? </label>
+                <textarea id="input" name="input" title="Question"></textarea>
+                <label>Pain Level: <select id="pain" name="painLevel" title="Pain Level">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select></label>
+                <label><button type="submit">Submit</button></label>
+            </form>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.facebook.com">
+            <img src="images/facebook.png" alt="facebook">
+        </a>
+        <a href="https://www.instagram.com">
+            <img src="images/instagram.svg" alt="instagram">
+        </a>
+        <a href="https://www.twitter.com">
+            <img src="images/twitter.png" alt="twitter">
+        </a>
+        <p>&copy; <span id="year">Joseph Garlick / Last Modified:</span>
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+
+</html>

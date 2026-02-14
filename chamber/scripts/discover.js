@@ -24,7 +24,7 @@
         const section = document.createElement('section');
         const name = document.createElement('h2');
         const img = document.createElement('img');
-        const address = document.createElement('p');
+        const address = document.createElement('address');
         const description = document.createElement('p');
         const button = document.createElement('button');
 
@@ -56,7 +56,48 @@ async function getData() {
     display(data.members);
 }
 
-    getData();
+getData();
 
-    // Last modified
+document.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('savedName');
+    if (saved) document.querySelector('#name').value = saved;
+});
+
+
+
+// Last modified
     if (lastModEl) lastModEl.textContent = document.lastModified;
+
+// Track last visit and show message AI helped me create this element. 
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        const now = Date.now();
+        const last = localStorage.getItem('lastVisit');
+        let message = '';
+
+        if (!last) {
+            message = 'Welcome! Let us know if you have any questions.';
+        } else {
+            const delta = now - parseInt(last, 10);
+            const days = Math.floor(delta / (1000 * 60 * 60 * 24));
+            if (delta < 1000 * 60 * 60 * 24) {
+                message = 'Back so soon! Awesome!';
+            } else {
+                message = `You last visited ${days} ${days === 1 ? 'day' : 'days'} ago.`;
+            }
+        }
+        
+        const messagecontainer = document.getElementById("visit-message")
+
+        messagecontainer.textContent = message;
+
+        const container = document.getElementById('card-container');
+        if (container && container.parentNode) {
+            container.parentNode.insertBefore(messageEl, container);
+        }
+
+        localStorage.setItem('lastVisit', String(now));
+    } catch (err) {
+        console.warn('localStorage not available:', err);
+    }
+});

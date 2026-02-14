@@ -1,0 +1,73 @@
+/* AI assited in areas of confustion. It was used as a tool to help overcome roadblocks,
+and come up with ideas on how to perform a specific task when I was stuck. */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header.show {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+header.show h1 {
+    grid-column: span 2;
+    place-self: center;
+}
+
+header.show button {
+    place-self: center;
+}
+
+body {
+    background-color: rgb(228, 209, 175);
+    color: navy;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+#ham-btn::before {
+    content: "\2630";
+}
+
+#ham-btn.show::before {
+    content: "\00D7";
+}
+
+.nav-bar {
+    display: none;
+}
+
+.nav-bar.show {
+    display: flex;
+    grid-column: span 2;
+    flex-direction: row;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+article{
+    background-color: rgba(135, 206, 250, 0.616);
+    color:navy;
+}
+
+footer {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}

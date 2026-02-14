@@ -1,0 +1,10 @@
+@media only screen and (min-width:1025px){
+    #ham-btn{
+        display: none;
+    }
+        #body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+}

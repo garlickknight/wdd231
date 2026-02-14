@@ -1,4 +1,4 @@
-@media screen and (max-width:640px) {
+
     body {
         background-color: #F5F0E1;
         font-family: "Roboto", sans-serif;
@@ -11,6 +11,7 @@
         justify-content: space-around;
         border: solid black;
     }
+
     a {
         text-decoration: none;
     }
@@ -55,14 +56,34 @@
 
     }
 
-    #card-container {
-        display: flex;
-        flex-direction: column;
+    #card-container section {
+        display: grid;
+        grid-template-areas:
+            "name"
+            "image"
+            "location"
+            "description";
     }
+
+    #card-container section h2 {
+        grid-area: name;
+
+    }
+
+    #card-container section img {
+        grid-area: image;
+    }
+
+    #card-container section address {
+        grid-area: location;
+    }
+
+    #card-container section p {
+        grid-area: description;
+    }
+
 
     section {
         background-color: lightblue;
         padding: 15px;
     }
-
-}

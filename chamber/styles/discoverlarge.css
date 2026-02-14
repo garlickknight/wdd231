@@ -1,95 +1,76 @@
 @media only screen and (min-width:1025px) {
-    body {
-        background-color: #F5F0E1;
-        font-family: "Roboto", sans-serif;
-    }
-
-    header {
+    #card-container {
         display: grid;
-        grid-template-columns: 44px auto auto;
-        align-items: center;
-        border: solid black;
-
+        grid-template-columns: 1fr 1fr;
     }
 
-    .navigation {
-        display: flex;
-        /* I asked AI how to get rid of the bullet points in the list and it helped me out. */
-    }
-
-    .nav {
-        display: flex;
-        text-decoration: none;
-        justify-content: space-between;
-        /* I asked AI how to get rid of the bullet points in the list and it helped me out. */
-        list-style: none;
-    }
-
-    li {
-        padding: 18px;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    #ham-btn {
-        display: none;
-    }
-
-    footer {
-        text-align: center;
-    }
-
-    #footerTitle {
-        text-align: center;
-    }
-
-    .links {
-        text-align: center;
-
-    }
-
-    .content {
-        text-align: center;
-    }
-
-    header div img {
-        width: 44px;
-        height: 44px;
-    }
-
-    footer div img {
-        width: 44px;
-        height: 44px;
-
-    }
-
-    #bar-btn::before {
-        content: "One Column Desplay";
-    }
-
-    #bar-btn.show::before {
-        content: "Grid Desplay";
-    }
-
-    section {
-        background-color: lightblue;
-        padding: 15px;
-        display: flex;
-        justify-content: space-around;
-
-    }
-    #card-container{
+    #card-container section {
+        padding: 1rem;
         display: flex;
         flex-direction: column;
-    }
-    section{
+        gap: 1rem;
         align-items: center;
-        margin: 0 auto;
-        width: 50vw;
-        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
     }
-
-
+         header {
+             display: grid;
+             grid-template-columns: 44px auto auto;
+             align-items: center;
+             border: solid black;
+    
+         }
+    
+         .navigation {
+             display: flex;
+             /* I asked AI how to get rid of the bullet points in the list and it helped me out. */
+         }
+    
+         .nav {
+             display: flex;
+             text-decoration: none;
+             justify-content: space-between;
+             /* I asked AI how to get rid of the bullet points in the list and it helped me out. */
+             list-style: none;
+         }
+        /* AI helped me figure out how to make the padding of the nav element look better */
+        .navigation li {
+            margin: 0;
+            padding: 0 18px;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        #ham-btn {
+            display: none;
+        }
+                footer {
+                    text-align: center;
+                }
+        
+                #footerTitle {
+                    text-align: center;
+                }
+        
+                .links {
+                    text-align: center;
+        
+                }
+        
+                .content {
+                    text-align: center;
+                }
+        
+                header div img {
+                    width: 44px;
+                    height: 44px;
+                }
+        
+                footer div img {
+                    width: 44px;
+                    height: 44px;
+        
+                }
 }

@@ -1,0 +1,19 @@
+@media only screen and (min-width:641px) {
+    .nav-bar {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 1.5rem;
+    }
+
+    #ham-btn {
+        display: none;
+    }
+
+    #ham-btn.show {
+        display: block;
+    }
+    
+
+}
