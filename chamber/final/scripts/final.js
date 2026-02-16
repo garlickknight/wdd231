@@ -40,3 +40,31 @@ async function getData() {
 };
 getData();
 
+const last = document.querySelector("#last");
+
+document.addEventListener("DOMContentLoaded", () => {
+    try {
+        if (!last) return;
+        last.innerHTML = "";
+        const now = Date.now();
+        const lastVisit = localStorage.getItem('lastVisit');
+        if (!lastVisit) {
+            last.innerHTML = "Welcome :) First time visiting? Get to know more about us and come check us out at the Join page.";
+        } else {
+            // AI helped me come up with this equation.
+            const delta = now - parseInt(lastVisit, 10);
+            const days = Math.floor(delta / (1000 * 60 * 60 * 24));
+            if (delta < 1000 * 60 * 60 * 24) {
+                last.innerHTML = 'Back so soon! Awesome!';
+            } else {
+                last.innerHTML = `You last visited ${days} ${days === 1 ? 'day' : 'days'} ago.`;
+            }
+        }
+        localStorage.setItem('lastVisit', now.toString());
+    } catch (err) {
+        console.warn('localStorage not available:', err);
+    }
+
+})
+
+

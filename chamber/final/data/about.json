@@ -65,18 +65,73 @@
                 "Precautions: may cause temporary redness or soreness; consult provider for fragile skin, bleeding disorders, or anticoagulant use."
             ]
         },
-        {
-            "id": "massage",
-            "title": "Massage",
-            "image": "images/redlight.jpg",
-            "alt": "massage therapy",
-            "description": "Manual and instrument-assisted techniques that address soft-tissue restrictions and scar tissue to improve mobility and reduce pain.",
-            "details": [
-                "Gua Sha: scraping with a smooth-edged tool to move stagnant tissue and increase circulation.",
-                "ASTYM: a structured, instrument-assisted protocol to promote remodeling of scar tissue and stimulate healing.",
-                "Benefits: improved tissue mobility, decreased pain, restoration of painless movement patterns.",
-                "Precautions: may cause temporary redness or soreness; consult provider for fragile skin, bleeding disorders, or anticoagulant use."
-            ]
-        }
+            {
+                "id": "massage",
+                "title": "Massage Therapy",
+                "image": "images/massage.jpg",
+                "alt": "Massage therapy",
+                "description": "Hands-on manipulation of muscles and soft tissues to reduce pain, relieve tension, improve circulation, and promote relaxation and healing.",
+                "details": [
+                    "Types: Swedish (relaxation), deep tissue (chronic tension), sports (athletic recovery), and trigger point therapy.",
+                    "Benefits: decreased muscle tightness, improved range of motion, enhanced circulation, reduced stress and pain.",
+                    "Typical session: 30–90 minutes; therapist uses strokes, kneading, compression and targeted techniques depending on goals.",
+                    "Precautions: avoid on deep vein thrombosis, fever, open wounds, recent fractures, or over areas with active infection; disclose pregnancy, implants, and medications to your provider."
+                ]
+            }, 
+            {
+                "id": "massage-gun",
+                "title": "Percussive Massage (Massage Gun)",
+                "image": "images/massage-gun.jpg",
+                "alt": "Handheld massage gun",
+                "description": "Percussive therapy using a handheld device delivering rapid pulses to soft tissue to reduce muscle tension, improve circulation, and accelerate warm-up and recovery.",
+                "details": [
+                    "Uses: pre/post-workout warm-up and recovery, relieving localized muscle tightness and trigger points.",
+                    "Benefits: increased blood flow, reduced soreness, improved tissue mobility, quicker warm-up.",
+                    "How to: apply low-to-moderate pressure and move slowly across the muscle for 30–90 seconds per area; avoid bony prominences.",
+                    "Precautions: avoid use over acute injuries, fractures, deep vein thrombosis, varicose veins, or areas with decreased sensation; consult a provider if pregnant or if you have implanted electronic devices."
+                ]
+            },
+            {
+                "id": "cupping",
+                "title": "Cupping Therapy",
+                "image": "images/cupping.jpg",
+                "alt": "Cupping therapy cups on back",
+                "description": "Suction-based therapy using cups to lift the skin and soft tissues, increasing circulation and releasing muscular and fascial restrictions.",
+                "details": [
+                    "How it works: negative pressure draws blood to the surface, promotes local circulation, and can help break up adhesions.",
+                    "Benefits: reduced muscle tension, improved range of motion, faster recovery, and pain relief for some conditions.",
+                    "Typical session: cups applied for 5–20 minutes; may use static or moving (gliding) techniques depending on goals.",
+                    "Precautions: common temporary marks or bruising; avoid on open wounds, skin infections, areas of poor sensation, or suspected DVT; consult if pregnant or taking anticoagulants."
+                ]
+            }, 
+            {
+                "id": "balance-ms",
+                "title": "Balance Training (Multiple Sclerosis)",
+                "image": "images/balance.jpg",
+                "alt": "Person doing balance exercise with therapist",
+                "description": "Targeted balance and vestibular exercises to improve postural stability, coordination, and confidence in people with multiple sclerosis. Aims to reduce fall risk and maintain mobility despite sensory, motor, and fatigue-related challenges.",
+                "details": [
+                    "Goals: enhance static and dynamic balance, gait stability, and reactive stepping to reduce falls.",
+                    "Typical exercises: seated and standing weight shifts, tandem and single-leg stance with support, dynamic reaching, obstacle navigation, and gaze-stability/vestibular drills.",
+                    "Progression: begin with supported, short-duration sets; increase challenge by reducing support, adding cognitive dual-tasks, uneven surfaces, or functional reaching as tolerated.",
+                    "Benefits: improved steadiness, safer mobility, greater confidence, and reduced fall incidence when practiced regularly.",
+                    "Precautions: account for heat sensitivity and fatigue—use short, frequent sessions; ensure supervision during standing/stepping tasks; stop if dizziness, severe imbalance, or marked spasticity occurs."
+                ]
+            }, 
+            {
+                "id": "dry-needling",
+                "title": "Dry Needling",
+                "image": "images/dry-needling.jpg",
+                "alt": "Therapist performing dry needling",
+                "description": "Insertion of thin, solid filiform needles into myofascial trigger points to reduce pain, release tight muscle bands, and restore normal function.",
+                "details": [
+                    "How it works: needles mechanically disrupt dysfunctional muscle fibers and stimulate local biochemical and neurological responses that promote pain modulation and tissue relaxation.",
+                    "Benefits: reduced local and referred pain, improved range of motion, decreased muscle tension, and facilitation of rehabilitation exercises.",
+                    "Typical session: brief needle insertions held or manipulated to elicit a twitch response; often combined with manual therapy and therapeutic exercise.",
+                    "Precautions: performed by trained clinicians; not recommended for patients with bleeding disorders, on anticoagulants, active infection at the site, or severe needle phobia. May cause temporary soreness or minor bruising."
+                ]
+            }
+
+        
     ]
 }
