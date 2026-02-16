@@ -1,23 +1,25 @@
-{"fathers":[
+{
+    "fathers": [
         {
-        "name": "Per Henrik Ling",
-        "lifespan": "1776–1839",
-        "country": "Sweden",
-        "image": "https://commons.wikimedia.org/wiki/File:Per_Henrik_Ling.jpg",
-        "description": "Developed a system of medical gymnastics emphasizing exercises and manipulations to restore physical health; influenced early therapeutic exercise methods."
-    },
-    {
-        "name": "Mary McMillan",
-        "lifespan": "1880–1959",
-        "country": "United States",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Mary_McMillan.jpg",
-        "description": "Organized and professionalized physical therapy in the U.S., establishing WWI rehabilitation protocols and advocating for practitioner training and standards."
-    },
-    {
-        "name": "Hippocrates",
-        "lifespan": "c. 460–c. 370 BCE",
-        "country": "Greece",
-        "image": "https://commons.wikimedia.org/wiki/File:Hippocrates.jpg",
-        "description": "Laid the foundations of clinical observation and rational treatment that later informed principles used in physical therapy."
-    }
-]}
+            "name": "Per Henrik Ling",
+            "lifespan": "1776–1839",
+            "country": "Sweden",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Per_Henrik_Ling.jpg",
+            "description": "Developed a system of medical gymnastics emphasizing exercises and manipulations to restore physical health; influenced early therapeutic exercise methods."
+        },
+        {
+            "name": "Mary McMillan",
+            "lifespan": "1880–1959",
+            "country": "United States",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Mary_McMillan.jpg",
+            "description": "Organized and professionalized physical therapy in the U.S., establishing WWI rehabilitation protocols and advocating for practitioner training and standards."
+        },
+        {
+            "name": "Hippocrates",
+            "lifespan": "c. 460–c. 370 BCE",
+            "country": "Greece",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Hippocrates.jpg",
+            "description": "Laid the foundations of clinical observation and rational treatment that later informed principles used in physical therapy."
+        }
+    ]
+}
