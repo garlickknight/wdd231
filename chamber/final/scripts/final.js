@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const now = Date.now();
         const lastVisit = localStorage.getItem('lastVisit');
         if (!lastVisit) {
-            last.innerHTML = "Welcome :) First time visiting? Get to know more about us and come check us out at the Join page.";
+            last.innerHTML = "Welcome ";
         } else {
             // AI helped me come up with this equation.
             const delta = now - parseInt(lastVisit, 10);
