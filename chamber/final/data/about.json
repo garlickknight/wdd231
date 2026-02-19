@@ -3,7 +3,7 @@
         {
             "id": "redlight",
             "title": "Red Light Therapy",
-            "image": "images/redlight.jpg",
+            "image": "images/redlightt.webp",
             "alt": "Red light therapy device",
             "description": "Low-level red and near-infrared light applied to skin to stimulate cellular repair and reduce inflammation. Commonly used for wound healing, pain reduction, and improving tissue recovery.",
             "details": [
@@ -16,7 +16,7 @@
         {
             "id": "stretching",
             "title": "Stretching",
-            "image": "images/redlight.jpg",
+            "image": "images/stretching.jpg",
             "alt": "Stretching",
             "description": "Targeted stretches improve flexibility, range of motion, and muscle balance. Used to prevent injury, relieve tightness, and support rehabilitation.",
             "details": [
@@ -29,7 +29,7 @@
         {
             "id": "exercise",
             "title": "Therapeutic Exercise",
-            "image": "images/redlight.jpg",
+            "image": "images/exercise.webp",
             "alt": "Man Exercising",
             "description": "Individualized exercise programs to restore strength, coordination, and functional movement patterns. Exercises progress from basic activation to functional and sport-specific tasks.",
             "details": [
@@ -42,7 +42,7 @@
         {
             "id": "estim",
             "title": "Electrical Stimulation (E-Stim)",
-            "image": "images/redlight.jpg",
+            "image": "images/estym.webp",
             "alt": "E-Stim",
             "description": "Therapeutic electrical currents applied through the skin to reduce pain, promote muscle activation, and support tissue healing.",
             "details": [
@@ -55,7 +55,7 @@
         {
             "id": "guasha-astym",
             "title": "Gua Sha & ASTYM",
-            "image": "images/redlight.jpg",
+            "image": "images/astym.webp",
             "alt": "ASTYM Therapy",
             "description": "Manual and instrument-assisted techniques that address soft-tissue restrictions and scar tissue to improve mobility and reduce pain.",
             "details": [
@@ -68,7 +68,7 @@
             {
                 "id": "massage",
                 "title": "Massage Therapy",
-                "image": "images/massage.jpg",
+                "image": "images/massage.webp",
                 "alt": "Massage therapy",
                 "description": "Hands-on manipulation of muscles and soft tissues to reduce pain, relieve tension, improve circulation, and promote relaxation and healing.",
                 "details": [
@@ -81,7 +81,7 @@
             {
                 "id": "massage-gun",
                 "title": "Percussive Massage (Massage Gun)",
-                "image": "images/massage-gun.jpg",
+                "image": "images/massageg.webp",
                 "alt": "Handheld massage gun",
                 "description": "Percussive therapy using a handheld device delivering rapid pulses to soft tissue to reduce muscle tension, improve circulation, and accelerate warm-up and recovery.",
                 "details": [
@@ -94,7 +94,7 @@
             {
                 "id": "cupping",
                 "title": "Cupping Therapy",
-                "image": "images/cupping.jpg",
+                "image": "images/cupping.webp",
                 "alt": "Cupping therapy cups on back",
                 "description": "Suction-based therapy using cups to lift the skin and soft tissues, increasing circulation and releasing muscular and fascial restrictions.",
                 "details": [
@@ -107,7 +107,7 @@
             {
                 "id": "balance-ms",
                 "title": "Balance Training (Multiple Sclerosis)",
-                "image": "images/balance.jpg",
+                "image": "images/balance.webp",
                 "alt": "Person doing balance exercise with therapist",
                 "description": "Targeted balance and vestibular exercises to improve postural stability, coordination, and confidence in people with multiple sclerosis. Aims to reduce fall risk and maintain mobility despite sensory, motor, and fatigue-related challenges.",
                 "details": [
@@ -121,7 +121,7 @@
             {
                 "id": "dry-needling",
                 "title": "Dry Needling",
-                "image": "images/dry-needling.jpg",
+                "image": "images/dryneedle.webp",
                 "alt": "Therapist performing dry needling",
                 "description": "Insertion of thin, solid filiform needles into myofascial trigger points to reduce pain, release tight muscle bands, and restore normal function.",
                 "details": [

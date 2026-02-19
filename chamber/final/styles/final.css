@@ -36,12 +36,23 @@ header.show h1 {
 header.show button {
     place-self: center;
 }
+.nav-bar a {
+    border: solid black;
+    padding: 1rem;
+}
+
+.nav-bar a:hover {
+    background-color: rgba(0, 0, 128, 0.1);
+}
+
+.nav-bar a.active {
+    background-color: navy;
+    color: white;
+}
 
 body {
-    background-color: rgb(228, 209, 175);
-    color: navy;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    
+    background-color: #f5f0e8;
+    color: #001f3f;
 }
 #ham-btn::before {
     content: "\2630";
@@ -73,11 +84,13 @@ li {
 a{
     text-decoration: none;
 }
+
+/* AI helped me identify this color contrast issue: */
 #staff div {
-    background-color: rgba(0, 0, 128, 0.486);
-    color:white;
-    
+    background-color: rgba(0, 0, 80, 0.85);
+    color: white;
 }
+
 footer{
     align-items: center;
     align-content: center;

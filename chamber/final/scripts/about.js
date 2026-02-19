@@ -28,6 +28,8 @@ const display = (info) => {
         h3.textContent = `${treatment.id}`;
         img.setAttribute("src", treatment.image || "");
         img.setAttribute("alt", treatment.alt || "");
+        img.setAttribute("width", 500);
+        img.setAttribute("loading", "lazy")
         paragraph.textContent = `${treatment.description}`;
 
         li.textContent = `${treatment.details ? treatment.details[0] : ""}`;

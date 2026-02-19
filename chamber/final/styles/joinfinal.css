@@ -17,14 +17,27 @@ header.show h1 {
     grid-column: span 2;
     place-self: center;
 }
-
+/* AI helped me figure out how to wayfind */
 header.show button {
     place-self: center;
 }
+.nav-bar a {
+    border: solid black;
+    padding: 1rem;
+}
 
+.nav-bar a:hover {
+    background-color: rgba(0, 0, 128, 0.1);
+}
+
+.nav-bar a.active {
+    background-color: navy;
+    color: white;
+}
+/* AI helped me itentify this color contrast issue.  */
 body {
-    background-color: rgb(228, 209, 175);
-    color: navy;
+    background-color: #f5f0e8;
+    color: #001f3f;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
 }

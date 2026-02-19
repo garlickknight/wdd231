@@ -21,12 +21,24 @@ header.show h1 {
 header.show button {
     place-self: center;
 }
+.nav-bar a{
+    border: solid black;
+    padding: 1rem;
+}
 
+.nav-bar a:hover {
+    background-color: rgba(0, 0, 128, 0.1);
+}
+
+.nav-bar a.active {
+    background-color: navy;
+    color: white;
+}
+/* AI helpe me identify a color contrast issue.  */
 body {
-    background-color: rgb(228, 209, 175);
-    color: navy;
+    background-color: #f5f0e8;
+    color: #001f3f;
     font-family: Georgia, 'Times New Roman', Times, serif;
-
 }
 
 #ham-btn::before {
@@ -51,6 +63,11 @@ body {
     display: flex;
     justify-content: space-around;
     gap: 1.5rem;
+}
+#treatments{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 li {
